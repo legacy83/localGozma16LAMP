@@ -2,9 +2,9 @@ Vagrant.configure("2") do |config|
     config.ssh.forward_agent = true
     config.ssh.insert_key = false
 
-    # Ubuntu 12.02 - Precise Pangolin
+    # Ubuntu 16.04 - Xenial Xerus
     config.vm.define "gozma16" do |gozma16|
-        gozma16.vm.box = "geerlingguy/ubuntu1204"
+        gozma16.vm.box = "geerlingguy/ubuntu1604"
         gozma16.vm.hostname = "gozma16"
         gozma16.vm.network "private_network", ip: "192.168.27.16"
         config.vm.synced_folder "sites/gozma16.local/", "/var/www/gozma16.local/public_html"
